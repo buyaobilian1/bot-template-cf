@@ -1,0 +1,17 @@
+name = "hbot-cf"
+main = "src/worker.ts"
+compatibility_date = "2022-07-10"
+# account_id = ""
+
+# Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
+# Note: Use secrets to store sensitive data.
+# Docs: https://developers.cloudflare.com/workers/platform/environment-variables
+# [vars]
+# TELEGRAM_BASE_URL = 'http://localhost:3100/bot'
+# BOT_TOKEN = ''
+
+[triggers]
+crons = ["* * * * *"]
+
+[build.upload]
+compression = true
